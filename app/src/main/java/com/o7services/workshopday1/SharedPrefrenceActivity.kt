@@ -9,15 +9,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.o7services.workshopday1.databinding.ActivityMainBinding
+import com.o7services.workshopday1.databinding.ActivitySharedPrefrenceBinding
 
 class SharedPrefrenceActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivitySharedPrefrenceBinding
     private var sharedPreferences: SharedPreferences? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding= ActivityMainBinding.inflate(layoutInflater)
+        binding= ActivitySharedPrefrenceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
